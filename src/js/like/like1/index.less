@@ -1,0 +1,37 @@
+@keyframes likeAnimation {
+  0% {
+    font-size: 14px;
+    opacity: 1;
+  }
+
+  100% {
+    top: -30px;
+    font-size: 20px;
+    opacity: 0;
+  }
+}
+
+.my-like {
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+
+  .icon {
+    font-size: 20px;
+  }
+
+  .icon-like-fill {
+    color: #f7b84f;
+  }
+
+  .my-like-animation {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    -webkit-animation-name: likeanimation;
+    animation-name: likeAnimation;
+    -webkit-animation-duration: 0.8s;
+    animation-duration: 0.8s;
+    animation-fill-mode: 'forwards';
+  }
+}
