@@ -19,6 +19,7 @@ export default defineConfig({
     '/css': [
       // { title: '首页', path: '/' },
       { title: '卡片', path: '/css/card' },
+      { title: '按钮', path: '/css/button' },
     ],
     '/js': [
       // { title:'跑马灯', path:'/js/marquee' },
