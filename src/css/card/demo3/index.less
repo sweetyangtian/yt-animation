@@ -1,0 +1,56 @@
+.m-card-demo3 {
+  display: flex;
+  flex-wrap: wrap;
+
+  .card-item {
+    position: relative;
+    width: 33%;
+    height: 220px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .mask {
+      position: absolute;
+      top: 0;
+      left: 0;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      padding: 24px;
+      overflow: hidden;
+      background: rgba(0, 0, 0, 0.3);
+      transition: all 0.5s linear;
+
+      h2 {
+        color: #fff;
+        font-size: 24px;
+        line-height: 2;
+        transition: all 0.5s linear;
+      }
+
+      p {
+        color: #000;
+        font-size: 14px;
+        line-height: 2;
+        opacity: 0;
+        transition: all 0.5s linear;
+      }
+    }
+
+    &:hover {
+      .mask {
+        background-color: #efefef;
+        opacity: 1;
+      }
+
+      p {
+        opacity: 1;
+      }
+
+      h2 {
+        color: #000;
+        font-size: 18px;
+      }
+    }
+  }
+}

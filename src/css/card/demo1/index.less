@@ -1,0 +1,43 @@
+@leftSpace: 60px;
+
+.m-card-demo1 {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 3rem 0 3rem 3rem;
+  overflow-x: scroll;
+
+  .card-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 200px;
+    min-height: 200px;
+    padding: 20px;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.5;
+    background: linear-gradient(85deg, #434343, #262626);
+    border-radius: 16px;
+    box-shadow: -2rem 0 3rem -2.5rem #000;
+    transition: 0.2s;
+
+    > span {
+      color: #777;
+      font-size: 12px;
+    }
+
+    &:not(:first-child) {
+      margin-left: -@leftSpace;
+      box-shadow: -3rem 0 3rem -2rem #000;
+    }
+
+    &:hover {
+      transform: translateY(-1rem) rotate(3deg);
+
+      ~ .card-item {
+        transform: translateX(@leftSpace);
+      }
+    }
+  }
+}
